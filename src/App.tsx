@@ -47,7 +47,7 @@ function App() {
     // Fetch API using helpers to fetch and hit the endpoint API url with limits data 25
     const fetchUsers = async () => {
       try {
-        const data = await GlobalGet<User[]>(apiUrl, {
+        const data = await GlobalGet<{ results: User[] }>(apiUrl, {
           params: { results: "25" },
         });
         setUsers(data.results);
