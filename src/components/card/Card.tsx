@@ -1,9 +1,22 @@
-import React from 'react'
+import "./Card.css";
 
-const Card = () => {
-  return (
-    <div>Card</div>
-  )
+/* Set separate props and initialize the type interface */
+interface CardProps {
+  title: React.ReactNode;
+  subTitle?: string;
+  icon?: React.ReactNode;
 }
 
-export default Card
+const Card = ({ title, subTitle, icon = "ICON" }: CardProps) => {
+  return (
+    <div className="card">
+      <div className="card-content">
+        <h2 className="card-title">{title}</h2>
+        {subTitle && <p className="card-subtitle">{subTitle}</p>}
+      </div>
+      <div className="card-icon">{icon}</div>
+    </div>
+  );
+};
+
+export default Card;

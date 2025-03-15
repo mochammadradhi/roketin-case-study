@@ -1,0 +1,120 @@
+/* Create table container to set a components inside */
+.table-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    align-items: center;
+    min-height: 80px;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+}
+
+/* divide three components into 3 left,center and right */
+.wrap-left-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Set the avatar to rounded avatar */
+.avatar-cell {
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    overflow: hidden;
+}
+
+/* Set the name styling */
+.name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Set the email styling */
+.email {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* divide three components into 3 left,center and right */
+.wrap-center-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+/* Set the age styling */
+.age {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* Set the gender female styling */
+.gender-female {
+    padding: 0.25rem 0.75rem;
+    background: #F7A4CE;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    color: #ffff;
+}
+
+/* Set the male styling */
+.gender-male {
+    padding: 0.25rem 0.75rem;
+    background: #8FBCE4;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    color: #ffff;
+}
+
+/* divide three components into 3 left,center and right */
+.wrap-right-info {
+    justify-self: start;
+}
+
+/* Set the address styling */
+.address {
+    color: black;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+/* Responsive Media With Smaller Screen 768 or Mobile Screen to set grid to 1 column and justify content center */
+@media (max-width: 768px) {
+    .table-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .wrap-left-info {
+        justify-content: center;
+    }
+
+    .wrap-center-info {
+        justify-content: center;
+    }
+
+    .wrap-right-info {
+        justify-self: center;
+    }
+}
